@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.zrcx.dao.MenuDao">
+     <select id="getListOfMenu" resultType="Menu">
+         select menu_id,menu_name,menu_number,menu_location,menu_url,menu_comment,menu_state from menu where menu_state !=0;
+     </select>
+     
+     <select id="getListOfMenus" resultType="Menu" parameterType="cn.zrcx.action.form.MybatisChoose">
+     SELECT * FROM menu WHERE menu_id in
+<foreach item="item" index="index" collection="arry" open="(" separator="," close=")"> 
+#{item}
+</foreach>
+     </select>
+</mapper>

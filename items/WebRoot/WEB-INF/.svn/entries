@@ -1,0 +1,49 @@
+8
+
+dir
+38
+https://brucezheng/svn/items/items/WebRoot/WEB-INF
+https://brucezheng/svn/items
+
+
+
+2017-03-30T12:22:18.245119Z
+38
+s1
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+2502dc84-833a-5d41-bbbc-9a7f1ac89414
+
+main
+dir
+
+message
+dir
+
+lib
+dir
+
+web.xml
+file
+
+
+
+
+2017-03-20T12:11:15.810929Z
+995f9805f8f756e13ec797a51bb0d290
+2017-03-21T06:00:22.150419Z
+2
+s0
+

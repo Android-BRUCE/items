@@ -1,0 +1,82 @@
+8
+
+dir
+38
+https://brucezheng/svn/items/items/WebRoot
+https://brucezheng/svn/items
+
+
+
+2017-03-30T12:22:18.245119Z
+38
+s1
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+2502dc84-833a-5d41-bbbc-9a7f1ac89414
+
+META-INF
+dir
+
+login.jsp
+file
+39
+
+
+
+2017-03-31T08:28:34.248682Z
+d4eaa92ef73fc35e05da5065f3643295
+2017-03-31T08:43:30.583979Z
+39
+s0
+
+skin
+dir
+
+images
+dir
+
+WEB-INF
+dir
+
+city_data.json
+file
+
+
+
+
+2017-03-24T13:29:37.110685Z
+c128d2de7b874862a2db81fa71adb4ca
+2017-03-25T07:58:15.526237Z
+15
+s0
+
+js
+dir
+
+message-seed.jsp
+file
+
+
+
+
+2017-03-24T13:18:12.899922Z
+3b9bf00d734816eb2f631659888b741e
+2017-03-23T02:41:15.728210Z
+13
+s1
+
+jquery-easyui-1.2.6
+dir
+

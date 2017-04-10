@@ -1,0 +1,52 @@
+8
+
+dir
+38
+https://brucezheng/svn/items/items/WebRoot/skin/css
+https://brucezheng/svn/items
+
+
+
+2017-03-21T06:00:22.150419Z
+2
+s0
+
+
+svn:special svn:externals svn:needs-lock
+
+base.css
+file
+
+
+
+
+2017-03-21T03:18:30.005914Z
+220b33830bf992a5c258c5ec30b8ee57
+2017-03-21T06:00:22.150419Z
+2
+s0
+
+main.css
+file
+
+
+
+
+2017-03-21T03:18:30.006915Z
+75f4d6d5fecfc69f5afecca16f0a4c40
+2017-03-21T06:00:22.150419Z
+2
+s0
+
+menu.css
+file
+
+
+
+
+2017-03-21T03:18:30.026817Z
+533af606b4a34dd111fc89bd6f23aa8c
+2017-03-21T06:00:22.150419Z
+2
+s0
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.zrcx.dao.CustomerDao">
+
+     <insert id="save" parameterType="Customer">
+         insert into customer (c_companyname,c_linkman,c_startdate,c_address,c_phone,c_mobilephone,c_intro,c_comment) values(#{c_companyname},#{c_linkman},#{c_startdate},#{c_address},#{c_phone},#{c_mobilephone},#{c_intro},#{c_comment})
+     </insert>
+     
+     <update id="update" parameterType="Customer">
+         update customer set c_companyname=#{c_companyname},c_linkman=#{c_linkman},c_update=#{c_update},c_address=#{c_address},c_phone=#{c_phone},c_mobilephone=#{c_mobilephone},c_intro=#{c_intro},c_comment=#{c_comment} where c_id=#{c_id}
+     </update>
+     
+     <delete id="delete" parameterType="Customer">
+         delete from customer where c_id=#{c_id}
+     </delete>
+     
+     <select id="getCustomer" parameterType="Customer" resultType="Customer">
+         select * from customer where c_id=#{c_id}
+     </select>
+     
+     <select id="getCustomers" parameterType="Customer" resultType="Customer">
+         select * from customer limit #{firstResult},#{maxResult}
+     </select>
+     <select id="getCustomersOrder" parameterType="Customer" resultType="Customer">
+         select * from customer order by #{order} limit #{firstResult},#{maxResult}
+     </select>
+     
+     <select id="checkC_companyname" parameterType="Customer" resultType="String">
+     	select c_companyname from customer where c_companyname=#{c_companyname}  
+     </select>
+     
+     <select id="getTotalRecord" resultType="int">
+     	select count(c_id) from customer
+     </select>
+     
+     <select id="getCustomerByLike" parameterType="Customer" resultType="Customer">
+     	select * from customer where c_companyname like '%#{c_companyname}%' or c_linkman like '%#{c_linkman}%' or c_update like '%#{c_update}%' or c_address like '%#{c_address}%' or c_phone like '%#{c_phone}%' or c_mobilephone like '%#{c_mobilephone}%' or c_intro like '%#{c_intro}%' or c_comment like '%#{c_comment}%' order by #{order}
+     </select>
+     
+     <select id="getCompanyNameJson" resultType="cn.zrcx.entity.CompanyNameJson">
+     	select c_id,c_companyname,c_linkman from customer;
+     </select>
+</mapper>

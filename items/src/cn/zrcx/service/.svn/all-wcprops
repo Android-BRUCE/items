@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/items/!svn/ver/34/items/src/cn/zrcx/service
+END
+EmployeeService.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/items/!svn/ver/3/items/src/cn/zrcx/service/EmployeeService.java
+END
+Employee_RoleService.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/items/!svn/ver/32/items/src/cn/zrcx/service/Employee_RoleService.java
+END
+RoleService.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/items/!svn/ver/14/items/src/cn/zrcx/service/RoleService.java
+END
+CustomerService.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/items/!svn/ver/39/items/src/cn/zrcx/service/CustomerService.java
+END
+ProjectBaseService.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/items/!svn/ver/39/items/src/cn/zrcx/service/ProjectBaseService.java
+END
+MenuService.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/items/!svn/ver/7/items/src/cn/zrcx/service/MenuService.java
+END
+PositionService.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/items/!svn/ver/32/items/src/cn/zrcx/service/PositionService.java
+END
+EmailService.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/items/!svn/ver/21/items/src/cn/zrcx/service/EmailService.java
+END

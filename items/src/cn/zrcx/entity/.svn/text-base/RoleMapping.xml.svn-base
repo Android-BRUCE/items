@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.zrcx.dao.RoleDao">
+
+     <insert id="addRole" parameterType="cn.zrcx.action.form.RoleAddInfo"
+     useGeneratedKeys="true" keyProperty="r_id"
+     	>
+         
+         insert into role(r_name,r_state,r_comment,r_number) values(#{r_name},#{r_state},#{r_comment},#{r_number});
+      <!--    insert into r_menu(r_id,menu_id) values(#{r_id},#{menu_id});  -->
+<!--          insert into r_menu(r_id,menu_id) values(#{r_id},#{menu_id})
+ useGeneratedKeys="true" keyProperty="r_id"
+ -->     </insert>
+ 
+ <insert id="addTheOfRoleMenuCenter" parameterType="cn.zrcx.action.form.RoleAndMenu">
+ 
+	insert into r_menu(r_id,menu_id) values(#{r_id},#{menu_id});
+ </insert>
+ 
+ <select id="getAllRoles" resultType="Role">
+ 	select r_number,r_name,r_state,r_id from role;
+ </select>
+ 
+ <delete id="deleteRole" parameterType="int">
+ 	 delete from role where r_id=#{r_id}
+ </delete>
+ <delete id="deleteRoleAndMenuFrom" parameterType="int">
+ 	delete from r_menu where r_id=#{r_id}
+ </delete>
+ 
+ <select id="getRoleInfoById" parameterType="int" resultType="Role">
+ select r_number,r_name,r_state,r_id,r_comment from role where r_id=#{r_id};
+ </select>
+ 
+ <select id="getRoleAndMenuInfoById" parameterType="int" resultType="cn.zrcx.action.form.RoleAndMenu">
+ 	select r_id,menu_id from r_menu where r_id=#{r_id}
+ </select>
+ 
+ <update id="saveEditRole" parameterType="cn.zrcx.action.form.RoleAddInfo">
+ 	 update role set r_name=#{r_name},r_state=#{r_state},r_comment=#{r_comment} where r_id=#{r_id};
+ </update>
+ <!-- 分页 -->
+ <select id="queryRoles" resultType="Role" parameterType="cn.zrcx.cutpage.PageView">
+ 	select * from role 
+ 	<if test="currentSize!=null and pageSize!=null">
+ 		limit #{currentPage},#{pageSize};
+ 	</if>
+ </select>
+ <!-- 查询总条数 -->
+ <select id="queryToltleSize" resultType="int">
+ 	select count(*) from role;
+ </select>
+ 
+ <!-- 按条件分页 -->
+ <select id="queryRolesByCondition" parameterType="cn.zrcx.cutpage.PageView" resultType="Role" statementType="STATEMENT">
+ 	select * from role where ${condition} like ${result} 
+ 	<if test="currentSize!=null and pageSize!=null">
+ 		limit ${currentPage},${pageSize}
+ 	</if>
+ </select>
+ <!-- 按条件查询总条数 -->
+ <select id="queryToltleSizeByCondition" parameterType="cn.zrcx.action.form.RoleDimForm" resultType="int" statementType="STATEMENT">
+ 	select count(*) from role where ${condition} like ${result};
+ </select>
+</mapper>

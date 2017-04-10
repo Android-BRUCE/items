@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.zrcx.dao.CheckLoginDao">
+     <select id="getEmployee" parameterType="Employee" resultType="Employee">
+         select e_id,position_id,e_name,e_password,e_sex,e_age,e_phone,e_startdate,e_idcard,e_comment,e_state from employee where e_name=#{e_name} and e_password=#{e_password}
+     </select>
+      <select id="getEmployee2" parameterType="cn.zrcx.action.form.LoginInfo" resultType="Employee">
+         select e_id,position_id,e_name,e_password,e_sex,e_age,e_phone,e_startdate,e_idcard,e_comment,e_state from employee where e_name=#{name} and e_password=#{password}
+     </select>
+     <select id="getENameById" parameterType="int" resultType="String">
+     	select e_name from employee where e_id=#{e_id}
+     </select>
+</mapper>

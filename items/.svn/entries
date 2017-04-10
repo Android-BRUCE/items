@@ -1,0 +1,61 @@
+8
+
+dir
+38
+https://brucezheng/svn/items/items
+https://brucezheng/svn/items
+
+
+
+2017-03-30T12:22:18.245119Z
+38
+s1
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+2502dc84-833a-5d41-bbbc-9a7f1ac89414
+
+.classpath
+file
+
+
+
+
+2017-03-20T12:05:19.456914Z
+0d729ed08b51de6336a509849c01fb78
+2017-03-21T06:00:22.150419Z
+2
+s0
+
+WebRoot
+dir
+
+.project
+file
+
+
+
+
+2017-03-21T02:39:32.252399Z
+9e1cf7eaefa3bbb8df311c699ad01a86
+2017-03-21T06:00:22.150419Z
+2
+s0
+
+src
+dir
+
+.settings
+dir
+

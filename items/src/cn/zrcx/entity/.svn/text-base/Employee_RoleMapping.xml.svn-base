@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.zrcx.dao.Employee_RoleDao">
+     
+<select id="position"  resultType="Position">
+     	select * from position;
+</select>
+<insert id="saveUser" parameterType="cn.zrcx.action.form.employeeForm"
+useGeneratedKeys="true" keyProperty="e_id"
+>
+	insert into employee(position_id,e_name,e_sex,e_phone,e_startdate,e_idcard,e_comment,e_age) values(#{position_id},#{e_name},#{e_sex},#{e_phone},#{e_startdate},#{e_idcard},#{e_comment},#{e_age});
+</insert>
+<!-- 插入中间表 -->
+<insert id="insertIntoRoleAndEmployee" parameterType="cn.zrcx.action.form.EmployeeAndRole">
+insert into employee_role(e_id,r_id) values(#{e_id},#{r_id})
+
+</insert>
+<!-- 可以带条件查询条数 -->
+<select id="getTotleNum" parameterType="cn.zrcx.action.form.UserDimForm" resultType="int" statementType="STATEMENT">
+	select count(*) from employee 
+	 	<if test="condition!=null and result!=null">
+ 		where ${condition} like ${result}
+ 	</if>
+</select>
+<!-- 可以模糊查询 -->
+<select id="getEmployeeOrderLimit" parameterType="cn.zrcx.cutpage.PageView" resultType="Employee">
+select * from employee 
+	<if test="condition!=null and result!=null">
+ 		where ${condition} like ${result}
+ 	</if>
+	<if test="sort!=null">
+ 		order by ${sort} desc 
+ 	</if>
+ 	limit ${currentPage},${pageSize}
+
+</select>
+<!-- 顺序role -->
+<select id="getRoles" resultType="cn.zrcx.action.form.EmployeeRoles" parameterType="int">
+SELECT r.r_name,r.r_id FROM role r,employee_role er WHERE r.`r_id` IN (SELECT r_id FROM employee_role er WHERE er.e_id=#{e_id}) AND r.r_id=er.r_id AND er.e_id=#{e_id}
+
+</select>
+<delete id="deleteEmployeeAndRoles" parameterType="int">
+	delete from employee_role where e_id=#{e_id}
+</delete>
+<select id="getSingleEmployeeById" parameterType="int" resultType="Employee">
+	select * from employee where e_id = #{e_id};
+</select>
+<update id="saveEditEmployee" parameterType="cn.zrcx.action.form.employeeForm">
+	update employee set e_name=#{e_name},e_sex=#{e_sex},e_age=#{e_age},e_phone=#{e_phone},e_afterdate=#{e_afterdate},e_idcard=#{e_idcard},e_comment=#{e_comment},position_id=#{position_id} where e_id=#{e_id};
+</update>
+<!-- 根据e_id查询employee的职位 -->
+<select id="getPositionByEmployeeId" parameterType="int" resultType="String">
+	select position_name from position p,employee e where e.e_id=#{e_id} and e.position_id=p.position_id; 
+</select>
+
+<delete id="deleteEmployeeByID" parameterType="int">
+delete from employee where e_id=#{e_id}
+</delete>
+
+<select id="getProjectEmployeeFromItems" resultType="ProjectEmployeeFromItems">
+	select e_id,e_name from employee where position_id=4;
+</select>
+</mapper>

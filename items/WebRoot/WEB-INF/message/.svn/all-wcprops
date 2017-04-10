@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/items/!svn/ver/35/items/WebRoot/WEB-INF/message
+END
+message.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/items/!svn/ver/35/items/WebRoot/WEB-INF/message/message.jsp
+END
+message-give.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/items/!svn/ver/16/items/WebRoot/WEB-INF/message/message-give.jsp
+END
+message-seed.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/items/!svn/ver/17/items/WebRoot/WEB-INF/message/message-seed.jsp
+END

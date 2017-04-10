@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/items/!svn/ver/34/items/src/cn/zrcx/service/impl
+END
+EmployeeServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/items/!svn/ver/39/items/src/cn/zrcx/service/impl/EmployeeServiceImpl.java
+END
+Employee_RoleImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/items/!svn/ver/39/items/src/cn/zrcx/service/impl/Employee_RoleImpl.java
+END
+RoleServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/items/!svn/ver/15/items/src/cn/zrcx/service/impl/RoleServiceImpl.java
+END
+CustomerServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/items/!svn/ver/39/items/src/cn/zrcx/service/impl/CustomerServiceImpl.java
+END
+ProjectBaseServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/items/!svn/ver/39/items/src/cn/zrcx/service/impl/ProjectBaseServiceImpl.java
+END
+MenuServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/items/!svn/ver/14/items/src/cn/zrcx/service/impl/MenuServiceImpl.java
+END
+EmailImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/items/!svn/ver/19/items/src/cn/zrcx/service/impl/EmailImpl.java
+END

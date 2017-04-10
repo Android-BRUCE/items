@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.zrcx.dao.ProjectBaseDao">
+	<insert id="saveProjectItems" parameterType="cn.zrcx.action.form.ProjectAddFrom">
+		insert into items(c_id,i_name,i_number,i_startdate,i_builddate,i_grade,i_cost,i_finishdate,i_comment,i_update,e_id) 
+		values(#{c_id},#{i_name},#{i_number},#{i_startdate},#{i_builddate},#{i_grade},#{i_cost},#{i_finishdate},#{i_comment},#{i_update},#{e_id});
+	</insert>
+	
+<select id="getAllProjectItems" resultType="ProjectBaseShow" parameterType="cn.zrcx.cutpage.PageView">
+	SELECT  
+i.`i_id`,
+i.`i_name`,
+c.`c_companyname`,
+c.`c_linkman`,
+e.`e_name`,
+i.`i_builddate`,
+i.`i_finishdate`,
+i.`i_state`,
+i.`i_update`,
+i.`i_number`
+FROM items i JOIN employee e ON i.e_id=e.`e_id` JOIN customer c ON c.`c_id`=i.`c_id`
+
+	<if test="condition!=null and result!=null">
+ 		where ${condition} like ${result}
+ 	</if>
+	<if test="sort!=null">
+ 		order by ${sort} desc 
+ 	</if>
+ 	<if test="currentPage != 0 and pageSize != 0">
+ 	limit ${currentPage},${pageSize}
+	</if>
+	</select>
+	
+	
+	<select id="getToltalNum" resultType="int" parameterType="cn.zrcx.action.form.ProjectBaseDimForm">
+	select count(i_id) from items 
+	<if test="condition!=null and result!=null">
+ 		where ${condition} like ${result}
+ 	</if>
+	</select>
+	
+	
+	
+</mapper>

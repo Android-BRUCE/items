@@ -1,0 +1,110 @@
+package cn.zrcx.entity;
+
+import java.util.Date;
+
+public class Employee {
+	private int e_id;
+	private int r_id;
+	private String position_id;
+	private String e_name;
+	private String e_password;
+	private String e_sex;
+	private int e_age;
+	private String e_phone;
+	private Date e_startdate;
+	private String e_idcard;
+	private String e_comment;
+	private int e_state;
+	private String e_afterdate;
+	
+	private String allRole;
+	
+	
+	
+	public String getAllRole() {
+		return allRole;
+	}
+	public void setAllRole(String allRole) {
+		this.allRole = allRole;
+	}
+	public String getE_afterdate() {
+		return e_afterdate;
+	}
+	public void setE_afterdate(String e_afterdate) {
+		this.e_afterdate = e_afterdate;
+	}
+	public int getE_id() {
+		return e_id;
+	}
+	public void setE_id(int e_id) {
+		this.e_id = e_id;
+	}
+	public int getR_id() {
+		return r_id;
+	}
+	public void setR_id(int r_id) {
+		this.r_id = r_id;
+	}
+	public String getPosition_id() {
+		return position_id;
+	}
+	public void setPosition_id(String position_id) {
+		this.position_id = position_id;
+	}
+	public String getE_name() {
+		return e_name;
+	}
+	public void setE_name(String e_name) {
+		this.e_name = e_name;
+	}
+	public String getE_password() {
+		return e_password;
+	}
+	public void setE_password(String e_password) {
+		this.e_password = e_password;
+	}
+	public String getE_sex() {
+		return e_sex;
+	}
+	public void setE_sex(String e_sex) {
+		this.e_sex = e_sex;
+	}
+	public int getE_age() {
+		return e_age;
+	}
+	public void setE_age(int e_age) {
+		this.e_age = e_age;
+	}
+	public String getE_phone() {
+		return e_phone;
+	}
+	public void setE_phone(String e_phone) {
+		this.e_phone = e_phone;
+	}
+	public Date getE_startdate() {
+		return e_startdate;
+	}
+	public void setE_startdate(Date e_startdate) {
+		this.e_startdate = e_startdate;
+	}
+	public String getE_idcard() {
+		return e_idcard;
+	}
+	public void setE_idcard(String e_idcard) {
+		this.e_idcard = e_idcard;
+	}
+	public String getE_comment() {
+		return e_comment;
+	}
+	public void setE_comment(String e_comment) {
+		this.e_comment = e_comment;
+	}
+	public int getE_state() {
+		return e_state;
+	}
+	public void setE_state(int e_state) {
+		this.e_state = e_state;
+	}
+	
+	
+}

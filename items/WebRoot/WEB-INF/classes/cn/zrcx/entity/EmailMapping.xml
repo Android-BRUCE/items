@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.zrcx.dao.EmailDao">
+
+      <insert id="save" parameterType="Email">
+         insert into email (email_state,email_sendman,email_receive,email_title,email_accessory,email_content,email_senddate) values(#{email_state},#{email_sendman},#{email_receive},#{email_title},#{email_accessory},#{email_content},#{email_senddate})
+      </insert>
+     <!-- 根据发件人ID查找 -->
+      <select id="getEmailById" resultType="Email" parameterType="cn.zrcx.action.form.EmailparameterType">
+ 				select * from email 
+ 			<if test="currentPage!=null and pageSize!=null">
+ 				where email_sendman=#{email_sendman} and email_state =1 limit #{currentPage},#{pageSize};
+ 			</if>
+ 	  </select>
+ <!-- 查询总条数 -->
+ 	<select id="queryToltleSize" resultType="int">
+ 		select count(*) from email where email_state = 0 ;
+	 </select>
+ <!--根据id找员工姓名 -->
+      <select id="getEmialreceive" parameterType="int" resultType="String">
+     	select e_name from employee where e_id=#{e_id}
+     </select>
+ <!-- 根据收件人ID查找 -->
+     <select id="getByIdreceive" resultType="Email" parameterType="cn.zrcx.action.form.EmailparameterType">
+ 				select * from email 
+ 			<if test="currentPage!=null and pageSize!=null">
+ 				where email_sendman=#{email_sendman} and email_state =1 limit #{currentPage},#{pageSize};
+ 			</if>
+ 	  </select>
+     <select id="queryToltleSize1" resultType="int">
+ 		select count(*) from email where email_state = 1 ;
+	 </select>
+     
+     <delete id="delete" parameterType="int">
+     	 delete from email where email_id=#{email_id}
+     </delete>
+     
+     <select id="getEmailByLike" parameterType="Employee" resultType="cn.zrcx.action.form.EmailparameterType">
+			select * from employee where like #{name}
+		<if test="name!='null%' and currentPage!=null and pageSize!=null">
+			 limit #{currentPage},#{pageSize};
+		</if>
+	</select>
+    
+</mapper>

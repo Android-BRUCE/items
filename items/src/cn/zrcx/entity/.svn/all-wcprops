@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/items/!svn/ver/34/items/src/cn/zrcx/entity
+END
+MenuMapping.xml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/items/!svn/ver/14/items/src/cn/zrcx/entity/MenuMapping.xml
+END
+Customer.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/items/!svn/ver/39/items/src/cn/zrcx/entity/Customer.java
+END
+Role.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/items/!svn/ver/25/items/src/cn/zrcx/entity/Role.java
+END
+CompanyNameJson.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/items/!svn/ver/39/items/src/cn/zrcx/entity/CompanyNameJson.java
+END
+ProjectBaseShow.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/items/!svn/ver/39/items/src/cn/zrcx/entity/ProjectBaseShow.java
+END
+PorjectItemsMapping.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/items/!svn/ver/39/items/src/cn/zrcx/entity/PorjectItemsMapping.xml
+END
+Menu.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/items/!svn/ver/9/items/src/cn/zrcx/entity/Menu.java
+END
+Position.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/items/!svn/ver/32/items/src/cn/zrcx/entity/Position.java
+END
+CompanyAddJson.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/items/!svn/ver/39/items/src/cn/zrcx/entity/CompanyAddJson.java
+END
+EmployeeMapping.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/items/!svn/ver/39/items/src/cn/zrcx/entity/EmployeeMapping.xml
+END
+Employee.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/items/!svn/ver/34/items/src/cn/zrcx/entity/Employee.java
+END
+EmailMapping.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/items/!svn/ver/23/items/src/cn/zrcx/entity/EmailMapping.xml
+END
+Email.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/items/!svn/ver/22/items/src/cn/zrcx/entity/Email.java
+END
+Employee_RoleMapping.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/items/!svn/ver/60/items/src/cn/zrcx/entity/Employee_RoleMapping.xml
+END
+RoleMapping.xml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/items/!svn/ver/34/items/src/cn/zrcx/entity/RoleMapping.xml
+END
+CustomerMapping.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/items/!svn/ver/39/items/src/cn/zrcx/entity/CustomerMapping.xml
+END
+ProjectEmployeeFromItems.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/items/!svn/ver/39/items/src/cn/zrcx/entity/ProjectEmployeeFromItems.java
+END
